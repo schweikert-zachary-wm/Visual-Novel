@@ -1,0 +1,15 @@
+body {
+    background-color: lightblue;
+}
+
+#tableOne {
+    color: aqua;
+    background-color: darkgray;
+    float: left;
+    margin-left: 35%;
+}
+#tableTwo {
+    color: hotpink;
+    background-color: darkgray;
+    float: left;
+}
