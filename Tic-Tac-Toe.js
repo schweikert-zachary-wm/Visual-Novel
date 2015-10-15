@@ -48,68 +48,83 @@ function game () {
 
 
     while (turnPlayer == "x") {
+
+
+
         if (place == "TOP LEFT" && topLeft != "___") { alert("This space is already taken")}                 //////////
-        if (place == "TOP LEFT" && topLeft == "___") {topLeft = " x "; turn = turn + 1 }                                   //////
+        if (place == "TOP LEFT" && topLeft == "___") {topLeft = " x "; turn = turn + 1;turnCounter() }                                   //////
                                                                                                                               ///////
         if (place == "TOP CENTER" && topCenter != "___") { alert("This space is already taken")}                        ////////
-        if (place == "TOP CENTER" && topCenter == "___") {topCenter = " x "; turn = turn + 1 }                                         // Top row
+        if (place == "TOP CENTER" && topCenter == "___") {topCenter = " x "; turn = turn + 1;turnCounter() }                                         // Top row
                                                                                                                                ////////
         if (place == "TOP RIGHT" && topRight != "___") { alert("This space is already taken")}                      ///////
-        if (place == "TOP RIGHT" && topRight == "___") {topRight = " x "; turn = turn + 1 }                           /////////
-
+        if (place == "TOP RIGHT" && topRight == "___") {topRight = " x "; turn = turn + 1;turnCounter() }                           /////////
 
         if (place == "MIDDLE LEFT" && middleLeft != "___") { alert("This space is already taken")}           ////////////
-        if (place == "MIDDLE LEFT" && middleLeft == "___") {middleLeft = " x "; turn = turn + 1 }                       /////////////
+        if (place == "MIDDLE LEFT" && middleLeft == "___") {middleLeft = " x "; turn = turn + 1;turnCounter() }                       /////////////
                                                                                                                                 ////////
         if (place == "MIDDLE CENTER" && middleCenter != "___") { alert("This space is already taken")}                      //////////
-        if (place == "MIDDLE CENTER" && middleCenter == "___") {middleCenter = " x "; turn = turn + 1 }                             ///////////   Middle row
+        if (place == "MIDDLE CENTER" && middleCenter == "___") {middleCenter = " x "; turn = turn + 1;turnCounter() }                             ///////////   Middle row
                                                                                                                                 ///////////
         if (place == "MIDDLE RIGHT" && middleRight != "___") { alert("This space is already taken")}            ////////////////
-        if (place == "MIDDLE RIGHT" && middleRight == "___") {middleRight = " x "; turn = turn + 1 }                 //////////////
+        if (place == "MIDDLE RIGHT" && middleRight == "___") {middleRight = " x "; turn = turn + 1;turnCounter() }                 //////////////
 
         if (place == "BOTTOM LEFT" && bottomLeft != "___") { alert("This space is already taken")}                 //////////
-        if (place == "BOTTOM LEFT" && bottomLeft == "___") {bottomLeft = " x "; turn = turn + 1 }                                   //////
+        if (place == "BOTTOM LEFT" && bottomLeft == "___") {bottomLeft = " x "; turn = turn + 1;turnCounter() }                                   //////
                                                                                                                                ///////
         if (place == "BOTTOM CENTER" && bottomCenter != "___") { alert("This space is already taken")}                        ////////
-        if (place == "BOTTOM CENTER" && bottomCenter == "___") {bottomCenter = " x "; turn = turn + 1 }                                         // bottom row
+        if (place == "BOTTOM CENTER" && bottomCenter == "___") {bottomCenter = " x "; turn = turn + 1;turnCounter() }                                         // bottom row
                                                                                                                                 /////////
         if (place == "BOTTOM RIGHT" && bottomRight != "___") { alert("This space is already taken")}                      ///////
-        if (place == "BOTTOM RIGHT" && bottomRight == "___") {bottomRight = " x "; turn = turn + 1 }
+        if (place == "BOTTOM RIGHT" && bottomRight == "___") {bottomRight = " x "; turn = turn + 1;turnCounter() }
 
+        place = 0;
+
+        if (place == 0) { alert("Please enter a valid position."); place = 1; game()}
+
+        function turnCounter () {
         if (turn < 9) {win();turnPlayer = "o"; game()}
         if (turn == 9) {win(); alert(topLeft + " " + topCenter + " " + topRight + "\n" + middleLeft + " " + middleCenter + " " + middleRight + "\n" + bottomLeft + " " + bottomCenter + " " + bottomRight + "\n" + "The game is a tie!"); throw "Game ends in a draw."}
+    }}
 
-    }
     while (turnPlayer == "o") {
         if (place == "TOP LEFT" && topLeft != "___") { alert("This space is already taken"); game()}                 //////////
-        if (place == "TOP LEFT" && topLeft == "___") {topLeft = " o "; turn = turn + 1 }                                   //////
+        if (place == "TOP LEFT" && topLeft == "___") {topLeft = " o "; turn = turn + 1;turnCounterB() }                                   //////
                                                                                                                               ///////
         if (place == "TOP CENTER" && topCenter != "___") { alert("This space is already taken"); game()}                        ////////
-        if (place == "TOP CENTER" && topCenter == "___") {topCenter = " o "; turn = turn + 1 }                                         // Top row
+        if (place == "TOP CENTER" && topCenter == "___") {topCenter = " o "; turn = turn + 1;turnCounterB() }                                         // Top row
                                                                                                                                 ////////
         if (place == "TOP RIGHT" && topRight != "___") { alert("This space is already taken"); game()}                      ///////
-        if (place == "TOP RIGHT" && topRight == "___") {topRight = " o "; turn = turn + 1 }                           /////////
+        if (place == "TOP RIGHT" && topRight == "___") {topRight = " o "; turn = turn + 1;turnCounterB() }                           /////////
 
 
         if (place == "MIDDLE LEFT" && middleLeft != "___") { alert("This space is already taken"); game()}           ////////////
-        if (place == "MIDDLE LEFT" && middleLeft == "___") {middleLeft = " o "; turn = turn + 1 }                       /////////////
+        if (place == "MIDDLE LEFT" && middleLeft == "___") {middleLeft = " o "; turn = turn + 1;turnCounterB() }                       /////////////
         ////////
         if (place == "MIDDLE CENTER" && middleCenter != "___") { alert("This space is already taken"); game()}                      //////////
-        if (place == "MIDDLE CENTER" && middleCenter == "___") {middleCenter = " o "; turn = turn + 1 }                             ///////////   Middle row
+        if (place == "MIDDLE CENTER" && middleCenter == "___") {middleCenter = " o "; turn = turn + 1;turnCounterB() }                             ///////////   Middle row
         ///////////
         if (place == "MIDDLE RIGHT" && middleRight != "___") { alert("This space is already taken"); game()}            ////////////////
-        if (place == "MIDDLE RIGHT" && middleRight == "___") {middleRight = " o "; turn = turn + 1 }                 //////////////
+        if (place == "MIDDLE RIGHT" && middleRight == "___") {middleRight = " o "; turn = turn + 1;turnCounterB() }                 //////////////
 
         if (place == "BOTTOM LEFT" && bottomLeft != "___") { alert("This space is already taken"); game()}                 //////////
-        if (place == "BOTTOM LEFT" && bottomLeft == "___") {bottomLeft = " o "; turn = turn + 1 }                                   //////
+        if (place == "BOTTOM LEFT" && bottomLeft == "___") {bottomLeft = " o "; turn = turn + 1;turnCounterB() }                                   //////
         ///////
         if (place == "BOTTOM CENTER" && bottomCenter != "___") { alert("This space is already taken"); game()}                        ////////
-        if (place == "BOTTOM CENTER" && bottomCenter == "___") {bottomCenter = " o "; turn = turn + 1 }                                         // bottom row
+        if (place == "BOTTOM CENTER" && bottomCenter == "___") {bottomCenter = " o "; turn = turn + 1;turnCounterB() }                                         // bottom row
         /////////
         if (place == "BOTTOM RIGHT" && bottomRight != "___") { alert("This space is already taken"); game()}                      ///////
-        if (place == "BOTTOM RIGHT" && bottomRight == "___") {bottomRight = " o "; turn = turn + 1 }                           /////////
+        if (place == "BOTTOM RIGHT" && bottomRight == "___") {bottomRight = " o "; turn = turn + 1;turnCounterB() }                           /////////
 
-        win(); turnPlayer = "x";game();
+
+        place = 0;
+
+        if (place == 0) { alert("Please enter a valid position."); place = 1; game()}
+
+        function turnCounterB () {
+            if (turn < 9) {win();turnPlayer = "x"; game()}
+            if (turn == 9) {win(); alert(topLeft + " " + topCenter + " " + topRight + "\n" + middleLeft + " " + middleCenter + " " + middleRight + "\n" + bottomLeft + " " + bottomCenter + " " + bottomRight + "\n" + "The game is a tie!"); throw "Game ends in a draw."}
+        }
     }
 
 
